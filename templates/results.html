@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .page-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .logo {
+            width: 150px; /* Adjust the width as needed */
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .no-results {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header-container">
+            <img src="{{ url_for('static', filename='images-removebg-preview.png') }}" alt="University Logo" class="logo">
+            <h1 class="h4">Search Results for "{{ query }}"</h1>
+        </header>
+        {% if results %}
+        <table class="table table-striped table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    {% for col in results[0].keys() %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                    <tr>
+                        {% for value in result.values() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="pagination">
+            {% if page > 1 %}
+                <a class="btn btn-primary" href="{{ url_for('search', query=query, page=page - 1) }}">Previous</a>
+            {% else %}
+                <button class="btn btn-secondary" disabled>Previous</button>
+            {% endif %}
+            {% if page < total_pages %}
+                <a class="btn btn-primary" href="{{ url_for('search', query=query, page=page + 1) }}">Next</a>
+            {% else %}
+                <button class="btn btn-secondary" disabled>Next</button>
+            {% endif %}
+        </div>
+        <div class="page-info">
+            Page {{ page }} of {{ total_pages }}
+        </div>
+        {% else %}
+            <p class="no-results">No results found for "{{ query }}".</p>
+        {% endif %}
+        <a class="btn btn-link back-link" href="/">Back to search</a>
+    </div>
+</body>
+</html>

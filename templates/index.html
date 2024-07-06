@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .logo {
+            width: 150px; /* Adjust the width as needed */
+        }
+        .form-container {
+            margin-top: 100px;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .header-container h5 {
+            font-size: 1.5em; /* Adjust the font size as needed */
+            color: #007bff; /* Add your desired color here */
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <header class="header-container">
+            <img src="{{ url_for('static', filename='images-removebg-preview.png') }}" alt="University Logo" class="logo">
+            <h5 class="h4">Welcome to the Telegram Data Search</h5>
+        </header>
+        <form action="/search" method="post" class="mt-4">
+            <div class="form-group">
+                <input type="text" name="query" class="form-control" placeholder="Enter search term" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Search</button>
+        </form>
+    </div>
+</body>
+</html>
