@@ -14,10 +14,10 @@ import pyzipper
 import zipfile
 
 # Configuration with new API credentials
-api_id = '27201032'  # New API ID
-api_hash = '1e6899a5e0bb179509ea228f42fb5831'  # New API Hash
-phone_number = '+212661293731'  # Your phone number
-target_channels = ['OBSERVERCLOUDCHAT']
+api_id = 'XXXXXXXXX'  # New API ID
+api_hash = 'XXXXXXXXXXXXXXXXXXXXXXXXXX'  # New API Hash
+phone_number = '+XXXXXXXXXXXXXXXXXX'  # Your phone number
+target_channels = ['XXXXXXXXXXXXX']
 db_path = 'passwords.db'
 
 
