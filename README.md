@@ -39,6 +39,7 @@ We are pleased to share our team's recent project at Université Internationale 
    ```python
    api_id = 'your_api_id'
    api_hash = 'your_api_hash'
+   phone_number = '+xxx xxxxxxxxxxxxxxx'
    ```
 2. Run the Telegram scraper bot:
    ```bash
