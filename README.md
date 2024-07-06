@@ -49,6 +49,11 @@ We are pleased to share our team's recent project at Université Internationale 
    ```bash
    python app.py
    ```
+Here is a screenshot of the graphical interface:
+
+![Screenshot 2024-07-06 202912](https://github.com/abdouhanafi/telegram-data-scraping/assets/95773668/556b2e10-ae9f-425e-ae26-ec38d9065098)
+
+
 
 ## Legal Notice
 
