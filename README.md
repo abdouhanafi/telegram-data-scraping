@@ -4,6 +4,12 @@
 
 We are pleased to share our team's recent project at Université Internationale de Rabat: the development of an advanced bot using the Telethon library for Telegram data scraping and analysis. This tool provides detailed insights into user behavior and communication patterns, supporting academic research, cybersecurity, and market analysis. By systematically collecting and processing large volumes of data, this bot offers valuable resources for exploring digital communication trends and understanding online social behaviors.
 
+Team Members
+
+    Adam Habibi
+    Abdelfattah Hanafi
+    Sohaib Belhassan
+
 ## Features
 
 - Scrapes data from specified Telegram channels
